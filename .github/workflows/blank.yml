@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+name: Impresión en consola de Linux
+
+on:
+  push:
+    branches:
+      - test_1
+
+jobs:
+  print_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Imprimir mensajes
+        run: |
+          echo "Impresión 1"
+          echo "Impresión 2"
+          echo "Impresión 3"
+
